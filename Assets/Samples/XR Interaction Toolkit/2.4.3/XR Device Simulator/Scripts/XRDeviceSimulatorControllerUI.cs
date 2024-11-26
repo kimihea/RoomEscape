@@ -94,6 +94,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.DeviceSimulator
         protected void Awake()
         {
             m_MainUIManager = GetComponent<XRDeviceSimulatorUI>();
+#if !UNITY_EDITOR
+              gameObject.SetActive(false);
+#endif
         }
 
         internal void Initialize(XRDeviceSimulator simulator)

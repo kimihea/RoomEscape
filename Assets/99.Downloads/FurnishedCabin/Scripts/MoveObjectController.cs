@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MoveObjectController : MonoBehaviour 
@@ -11,7 +11,7 @@ public class MoveObjectController : MonoBehaviour
 
 	private const string animBoolName = "isOpen_Obj_";
 
-	private bool playerEntered;
+	private bool playerEntered = true;
 	private bool showInteractMsg;
 	private GUIStyle guiStyle;
 	private string msg;
@@ -91,7 +91,7 @@ public class MoveObjectController : MonoBehaviour
 					bool isOpen = anim.GetBool(animBoolNameNum);	//need current state for message.
 					msg = getGuiMsg(isOpen);
 
-					if (Input.GetKeyUp(KeyCode.E) || Input.GetButtonDown("Fire1"))
+					if (OVRInput.Get((OVRInput.Button.PrimaryIndexTrigger))|| OVRInput.Get((OVRInput.Button.SecondaryIndexTrigger)))
 					{
 						anim.enabled = true;
 						anim.SetBool(animBoolNameNum,!isOpen);
