@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,10 +18,14 @@ public class Radio: MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClips[currentClipIndex];
+        UpdateMusicName(currentClipIndex);
+        audioSource.Play();
         audioSource.playOnAwake = true;
         audioSource.loop = true;
         originalPosition = m_TextMeshPro.transform.position;
-        UpdateMusicName(currentClipIndex);
+        
+
     }
     private void Update()
     {
@@ -42,6 +47,7 @@ public class Radio: MonoBehaviour
         else
             audioSource.Play();
     }
+    [MenuItem("Tools/PlayNextBgm")]
     public void PlayNextBgmClip()
     {
         currentClipIndex = (currentClipIndex + 1) % audioClips.Count;
