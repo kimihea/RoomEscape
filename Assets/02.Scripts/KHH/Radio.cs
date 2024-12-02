@@ -47,7 +47,6 @@ public class Radio: MonoBehaviour
         else
             audioSource.Play();
     }
-    [MenuItem("Tools/PlayNextBgm")]
     public void PlayNextBgmClip()
     {
         currentClipIndex = (currentClipIndex + 1) % audioClips.Count;
