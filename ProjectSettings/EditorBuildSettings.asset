@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Khh.unity
     guid: 6c9bcc9a3239a7c4e9538bda987570e6
+  - enabled: 0
+    path: Assets/Oculus/Interaction/Samples/Scenes/Features/RayCanvasFlat.unity
+    guid: 7f5c84932632e2a4eb3d90db823935f1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a05be05206e5b9543926f20c80d4db2e,
       type: 2}
