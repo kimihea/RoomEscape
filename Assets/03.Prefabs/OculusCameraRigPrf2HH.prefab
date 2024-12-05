@@ -9893,7 +9893,7 @@ MonoBehaviour:
   m_modelMetaTouchPlusRightController: {fileID: 3701571048118756941}
   m_controller: 2
   m_showState: 1
-  showWhenHandsArePoweredByNaturalControllerPoses: 1
+  showWhenHandsArePoweredByNaturalControllerPoses: 0
 --- !u!1 &4542000182566217702
 GameObject:
   m_ObjectHideFlags: 0
@@ -16690,7 +16690,7 @@ MonoBehaviour:
   m_modelMetaTouchPlusRightController: {fileID: 8431813307365002843}
   m_controller: 1
   m_showState: 1
-  showWhenHandsArePoweredByNaturalControllerPoses: 1
+  showWhenHandsArePoweredByNaturalControllerPoses: 0
 --- !u!114 &7691852302198879742
 MonoBehaviour:
   m_ObjectHideFlags: 0
