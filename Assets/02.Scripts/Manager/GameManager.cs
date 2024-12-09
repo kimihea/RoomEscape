@@ -14,6 +14,10 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         
+        if (OVRInput.GetDown(OVRInput.Button.One))
+        {
+            //퀴즈순회 반짝이기;
+        }
     }
     void UpdateRoom(RoomSO roomInfo)
     {
