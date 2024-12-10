@@ -15,8 +15,8 @@ MonoBehaviour:
   RoomName: Jeong
   QuizCount: 3
   QuizPozitions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: -1.51, y: 0.961, z: -0.236}
+  - {x: -2.102, y: 0.839, z: -0.616}
+  - {x: -1.688, y: 1.14, z: 0.949}
   LimitTime: 600
   FullAchievement: 3

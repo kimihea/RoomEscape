@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
     {
         //add BgmClips
         //audioClips.Add(Resources.Load<AudioClip>("AudioSource/Music/Dream"));
-        
+        LoadAudioComponent();   
     }
 
     private void LoadAudioComponent()

@@ -18,6 +18,11 @@ public class GameManager : Singleton<GameManager>
         {
             //퀴즈순회 반짝이기;
         }
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            //퀴즈 Rest
+            //컨트롤러에서 Ray를 발사하고 값을 돌려준다.
+        }
     }
     void UpdateRoom(RoomSO roomInfo)
     {

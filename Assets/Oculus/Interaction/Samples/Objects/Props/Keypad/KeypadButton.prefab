@@ -373,6 +373,11 @@ PrefabInstance:
       propertyPath: _selectColorState.Color.a
       value: 0.8392157
       objectReference: {fileID: 0}
+    - target: {fileID: 8567920512713008716, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+        type: 3}
+      propertyPath: _renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 7809979629248619716}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -471,3 +476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317e663e2bb60ea408fe22b908b59295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &7809979629248619716 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 911671610713679380, guid: 5fca3702cdf1a214a94e69dcfa704e17,
+    type: 3}
+  m_PrefabInstance: {fileID: 6972829411301327568}
+  m_PrefabAsset: {fileID: 0}
