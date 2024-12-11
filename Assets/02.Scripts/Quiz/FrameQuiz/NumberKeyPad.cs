@@ -10,7 +10,7 @@ using UnityEngine.Windows;
 public class NumberKeyPad : MonoBehaviour
 {
     public TextMeshPro NumberInput;
-    const string correctPassword = "1213";
+    const string correctPassword = "2813";
     public string input;
     public QuizObject MotherQuiz;
     /// <summary>
@@ -18,13 +18,14 @@ public class NumberKeyPad : MonoBehaviour
     /// </summary>
     //입력을 받을 텍스트와 번호들
 
-    void Update()
+    void Start()
     {
         
     }
     public void GetNumber(int index)
     {
         input += index.ToString();
+        NumberInput.text = input;
             if (input.Length == 4) // 네 자리 입력되면
             {
                 if (input == correctPassword) // 암호 일치 확인
@@ -37,12 +38,17 @@ public class NumberKeyPad : MonoBehaviour
                 {
                     NumberInput.text = "Password is not Correct";
                     AudioManager.Instance.PlayEffect("InCorrect");
+                }
+            Invoke("Reset",2f);
+
             }
-                input = "";
-            }
-        }
-        
-    
+    }
+    private void Reset()
+    {
+        input = "";
+        NumberInput.text = input;
+    }
+
 }
 
 
