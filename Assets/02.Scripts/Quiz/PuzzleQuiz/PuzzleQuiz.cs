@@ -23,7 +23,9 @@ public class PuzzleQuiz : QuizObject
         {
             isSolved = true;   
         }
-        PlayEffect(IsSolved);
+
+        EdgeRenderer.material = EdgeMaterial;
+        AudioManager.Instance.PlayEffect("Quiz2");
     }
     private void OnCollisionEnter(Collision collision)
     {

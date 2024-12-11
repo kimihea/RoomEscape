@@ -36,7 +36,7 @@ public class Radio: MonoBehaviour
         else
         {
             m_TextMeshPro.transform.position = originalPosition;
-            Debug.Log("Reset");
+            //Debug.Log("Reset");
         }
     }
 

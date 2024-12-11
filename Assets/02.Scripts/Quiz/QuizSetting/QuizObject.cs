@@ -1,6 +1,8 @@
 using UnityEngine;
 public abstract class QuizObject : MonoBehaviour 
 {
+    public Material EdgeMaterial;
+    public MeshRenderer EdgeRenderer;
     protected bool isSolved;
     public bool IsSolved
     {

@@ -18,6 +18,8 @@ public class FrameQuiz : QuizObject
     {
         //보상지급
         isSolved = true;
+        AudioManager.Instance.PlayEffect("Quiz1");
+        EdgeRenderer.material = EdgeMaterial;
     }
 
     protected override void ResetQuiz()

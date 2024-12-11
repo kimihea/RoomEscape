@@ -31,7 +31,6 @@ public class NumberKeyPad : MonoBehaviour
                 if (input == correctPassword) // 암호 일치 확인
                 {
                     NumberInput.text = "Password is  Correct";
-                    MotherQuiz.PlayEffect(true);
                     MotherQuiz.SendMessage("QuizCorrect");
                 }
                 else
