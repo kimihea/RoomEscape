@@ -5,21 +5,38 @@ using UnityEngine;
 public class FrameQuiz : QuizObject
 {
     public Transform Frame;
-    public Transform KeyPad;
 
     private Transform FrameValue;
-    private Transform KeyPadValue;
+    public Puzzle[] puzzle;
+    void Start()
+    {
+        EdgeRenderer.enabled = false;
+        FrameValue = Frame;
+    }
     protected override void Hint()
     {
-       
+        
     }
 
     protected override void QuizCorrect()
     {
-        //보상지급
         isSolved = true;
-        AudioManager.Instance.PlayEffect("Quiz1");
-        EdgeRenderer.material = EdgeMaterial;
+        AudioManager.Instance.PlayEffect("Puzzle");
+        foreach (var p in puzzle)
+        {
+            if (!p.Finish)
+                isSolved = false;
+        }
+        //모두Finish되었다면최종 엔드
+        if(isSolved)
+        {
+            isSolved = true;
+            AudioManager.Instance.PlayEffect("Quiz1");
+            EdgeRenderer.enabled = true;
+            EdgeRenderer.material = EdgeMaterial;
+        }
+        //보상지급
+
     }
 
     protected override void ResetQuiz()
@@ -27,21 +44,11 @@ public class FrameQuiz : QuizObject
         if (isSolved)
         {
             Frame = FrameValue;
-            KeyPad = KeyPadValue;
         }
         else
         {
 
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        FrameValue = Frame;
-        KeyPadValue = KeyPad;
-    }
-
-    // Update is called once per frame
 
 }

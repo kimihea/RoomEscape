@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Diagnostics.Tracing;
 using System.Collections;
+using Unity.XR.CoreUtils;
 public class Puzzle : MonoBehaviour 
 {
     [SerializeField]
@@ -9,10 +10,14 @@ public class Puzzle : MonoBehaviour
     private GameObject Hover;
     Color NonHove;
     public ParticleSystem particle;
-
+    public QuizObject MotherQuiz;
     public string targetLayerName = "TargetLayer"; // 검사할 Layer 이름
     public Material Diagram;
     private bool finish=false;
+    public bool Finish
+    {
+        get { return finish; }
+    }
     [SerializeField]
     private float requiredTime = 1f; // 충돌 유지 시간 (초)
 
@@ -98,7 +103,7 @@ public class Puzzle : MonoBehaviour
         Hover.gameObject.SetActive(false);
         particle.Play();
         hovering.material = Diagram;
-        //"성공 동작 수행"
+        MotherQuiz.SendMessage("QuizCorrect");
     }
 
 }

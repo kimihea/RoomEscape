@@ -6,12 +6,13 @@ public class NewsQuiz : QuizObject
 {
     protected override void Hint()
     {
-        throw new System.NotImplementedException();
+           
     }
 
     protected override void QuizCorrect()
     {
         AudioManager.Instance.PlayEffect("Quiz3");
+        EdgeRenderer.enabled = true;
         EdgeRenderer.material = EdgeMaterial;
     }
 
@@ -23,7 +24,7 @@ public class NewsQuiz : QuizObject
     // Start is called before the first frame update
     void Start()
     {
-        
+        EdgeRenderer.enabled = false;
     }
 
     // Update is called once per frame

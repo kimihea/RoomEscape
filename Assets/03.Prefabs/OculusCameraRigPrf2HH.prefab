@@ -3931,7 +3931,7 @@ MonoBehaviour:
   _skinnedMeshRenderer: {fileID: 3570724462422900571}
   _updateRootPose: 1
   _updateRootScale: 1
-  _root: {fileID: 0}
+  _root: {fileID: 4023654109699024452}
   _handMaterialPropertyBlockEditor: {fileID: 695105623291565679}
   _jointTransforms:
   - {fileID: 6317772962520998230}
@@ -16222,7 +16222,7 @@ MonoBehaviour:
   _skinnedMeshRenderer: {fileID: 7432700645700461007}
   _updateRootPose: 1
   _updateRootScale: 1
-  _root: {fileID: 0}
+  _root: {fileID: 7057217196253138304}
   _handMaterialPropertyBlockEditor: {fileID: 6261208351363020568}
   _jointTransforms:
   - {fileID: 4405063419041082876}
@@ -18230,8 +18230,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.9
-  m_Radius: 0.4
+  m_Height: 1.89
+  m_Radius: 0.24
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -18256,7 +18256,7 @@ MonoBehaviour:
   RotationAmount: 1.5
   RotationRatchet: 45
   SnapRotation: 1
-  RotateAroundGuardianCenter: 0
+  RotateAroundGuardianCenter: 1
   FixedSpeedSteps: 0
   HmdResetsY: 1
   HmdRotatesY: 1
