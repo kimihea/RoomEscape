@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SamplesInfoPanel
   - Quiz
+  - Puzzle
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - Water
   - UI
   - Tage
-  - 
-  - 
-  - 
-  - 
+  - Red
+  - Orange
+  - Yellow
+  - Green
   - 
   - 
   - 
